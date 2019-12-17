@@ -1,3 +1,5 @@
+![logo](_media/icon.svg)
+
 # docsify-themeable
 
 > A delightfully simple theme system for [docsify.js](https://docsify.js.org)

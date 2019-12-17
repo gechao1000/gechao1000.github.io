@@ -5,25 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
+    <link rel="icon" href="_media/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-
 </head>
 
 <body>
     <div id="app"></div>
     <script>
         window.$docsify = {
-            name: '',
-            repo: '',
-            // coverpage  : 'coverpage.md',
-			homepage   : 'README.md',
-            loadSidebar: 'sidebar.md',
+            // 在侧边栏中出现的网站图标
+            // logo: '/_media/icon.svg',
+            // 文档标题，会显示在侧边栏顶部
+            name: 'docsify',
+            // 仓库地址
+            repo: 'https://github.com/docsifyjs/docsify/',
+            // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级
+            maxLevel: 4,
+            // 加载自定义导航栏, 默认`_navbar.md`
+            loadNavbar: true,
+            // 加载自定义侧边栏，默认`_sidebar.md`
+            loadSidebar: true,
+            // 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能
+            subMaxLevel: 2,
+            // 切换页面后是否自动跳转到页面顶部
             auto2top: true,
-            maxLevel: 3,
-            subMaxLevel: 3,
+            // 启用封面页，默认`_coverpage.md`
+            // onlyCover: true,
+            coverpage: false,
+            // 显示文档更新日期
+            formatUpdated: '{MM}/{DD} {HH}:{mm}',
+            // 主题：https://github.com/jhildenbiddle/docsify-themeable
             themeable: {
-                // readyTransition: true,
-                // responsiveTables: true 
+                readyTransition: true,
+                responsiveTables: true
+            },
+            // 插件：https://jhildenbiddle.github.io/docsify-tabs
+            tabs: {
+                persist: true,
+                sync: false,
+                theme: 'classic',
+                tabComments: true,
+                tabHeadings: true
             }
         }
     </script>
@@ -33,8 +55,11 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
 
     <!-- plugins -->
-    <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
-    <script src="https://unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 </body>
 
 </html>
